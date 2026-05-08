@@ -14,19 +14,20 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="logo">
             <div class="logo-icon">☼</div>
             <div class="logo-text">Empowering<br>Hope Project</div>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#about" data-i18n="nav_about">ABOUT US</a></li>
             <li><a href="#work" data-i18n="nav_work">OUR WORK</a></li>
             <li><a href="#instagram" data-i18n="nav_instagram">FOLLOW THE JOURNEY</a></li>
             <li><a href="#help" data-i18n="nav_help">WANT TO HELP?</a></li>
             <li><a href="#contact" data-i18n="nav_contact">CONTACT</a></li>
         </ul>
-        <div class="language-selector">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <div class="language-selector">
             <button id="lang-btn">🇬🇧 EN</button>
             <div class="lang-dropdown" id="lang-dropdown">
                 <a href="#" onclick="changeLanguage('en'); return false;"><img class="lang-flag" src="media/GB.png"

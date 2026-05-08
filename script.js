@@ -1,3 +1,14 @@
+// Apply saved language on load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('lang') || 'en';
+  if (translations[savedLang]) {
+    changeLanguage(savedLang);
+  } else {
+    changeLanguage('en');
+  }
+  if (typeof updateInstructionPdfLink === 'function') updateInstructionPdfLink(savedLang);
+});
+
 const translations = {
     en: {
         nav_about: "ABOUT US",
@@ -174,7 +185,7 @@ function changeLanguage(lang) {
         fr: { img: "media/FR.png", label: "FR" },
 
     };
-    langBtn.innerHTML = `<img class="lang-flag" src="${flags[lang].img}" alt="${lang} flag"> ${flags[lang].label}`;
+    langBtn.innerHTML = `<img class="lang-flag" src="${flags[lang].img}" alt="" aria-hidden="true"> <span class="lang-code">${flags[lang].label}</span>`;
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -320,3 +331,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.navbar');
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!nav || !toggle || !links) return;
+
+  const closeNav = () => {
+    nav.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = nav.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  document.addEventListener('click', (e) => { if (!nav.contains(e.target)) closeNav(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 768) closeNav(); });
+});
