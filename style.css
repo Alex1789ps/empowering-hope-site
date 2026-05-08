@@ -1,0 +1,900 @@
+:root {
+    --bg-light: #F9F8F6;
+    --text-dark: #111111;
+    --primary-yellow: #F5A623;
+    --uganda-red: #D90000;
+    --uganda-black: #000000;
+    --uganda-yellow: #FCDC04;
+    --border-color: #E5E5E5;
+    --font-main: 'Fira Sans Condensed', sans-serif;
+    --lang-flag-w: 30px;
+    --lang-flag-h: 20px;
+    --lang-gap: 8px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background-color: var(--primary-yellow);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid var(--text-dark);
+}
+
+.logo-text {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: var(--primary-yellow);
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+}
+
+/* Bandera en el selector de idioma */
+.lang-flag {
+    width: var(--lang-flag-w);
+    /* ajusta a 16-20px según te guste */
+    height: var(--lang-flag-h);
+    /* proporción típica de bandera */
+    object-fit: cover;
+    border-radius: 2px;
+    vertical-align: -2px;
+    /* la baja un pelín para alinear con el texto */
+    margin-right: 8px;
+    display: inline-block;
+}
+
+
+/* Botón del idioma (arriba a la derecha) con icono + texto bien alineados */
+
+#lang-btn {
+    background: transparent;
+    border: 1px solid var(--text-dark);
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 17px;
+
+    /* ✅ lo importante para bandera + texto */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+}
+
+
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+}
+
+.lang-dropdown.show {
+    display: block;
+}
+
+.lang-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 13px;
+}
+
+.lang-dropdown a:hover {
+    background: var(--bg-light);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 85vh;
+    background-image: url('media/paisaje.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-top-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: linear-gradient(to right,
+            var(--uganda-black) 0%,
+            var(--uganda-black) 16.666%,
+            var(--uganda-yellow) 16.666%,
+            var(--uganda-yellow) 33.333%,
+            var(--uganda-red) 33.333%,
+            var(--uganda-red) 50%,
+            var(--uganda-black) 50%,
+            var(--uganda-black) 66.666%,
+            var(--uganda-yellow) 66.666%,
+            var(--uganda-yellow) 83.333%,
+            var(--uganda-red) 83.333%,
+            var(--uganda-red) 100%);
+
+
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon-small {
+    color: var(--primary-yellow);
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    letter-spacing: -2px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 16px 32px;
+    border: 1px solid var(--text-dark);
+}
+
+.btn-primary:hover {
+    background-color: #E59400;
+}
+
+.btn-link {
+    color: white;
+    border-bottom: 2px solid var(--primary-yellow);
+    padding-bottom: 5px;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    min-height: 70vh;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.about-image-container {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    border-right: 1px solid var(--border-color);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-left: 10px solid var(--primary-yellow);
+}
+
+.about-content {
+    flex: 1.5;
+    padding: 100px 80px;
+}
+
+.section-label {
+    color: var(--uganda-red);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin-bottom: 60px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 60px;
+}
+
+.stat-item {
+    border-top: 2px solid var(--text-dark);
+    padding-top: 20px;
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Founder Section */
+.founder-section {
+    padding: 40px 80px;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.founder-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.founder-red-line {
+    width: 4px;
+    height: 40px;
+    background-color: var(--uganda-red);
+}
+
+.founder-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.founder-title {
+    font-size: 14px;
+    color: #666;
+}
+
+.founder-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    /* espacio justo debajo del subtítulo */
+    text-decoration: none;
+    color: #666;
+    /* mismo tono que founder-title */
+    font-size: 14px;
+    /* encaja con el subtítulo */
+}
+
+.founder-ig:hover {
+    color: var(--text-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.founder-ig-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+}
+
+.founder-ig-handle {
+    font-weight: 600;
+}
+
+
+/* Work Section */
+.work-section {
+    padding: 100px 80px;
+    background-color: white;
+    text-align: center;
+}
+
+.work-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-label {
+    color: #2E5A27;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+#work .section-title {
+    margin-bottom: 12px;
+}
+
+
+.work-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/*.uganda-flag-block {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(to right, var(--uganda-black) 33%, var(--uganda-yellow) 33%, var(--uganda-yellow) 66%, var(--uganda-red) 66%);
+}*/
+
+
+.uganda-flag-bar {
+    height: 25px;
+    width: 100%;
+    margin: 2px auto;
+    border-radius: 6px;
+
+    /* 6 bloques: negro/amarillo/rojo/negro/amarillo/rojo */
+    background: linear-gradient(to bottom,
+            var(--uganda-black) 0%,
+            var(--uganda-black) 16.666%,
+            var(--uganda-yellow) 16.666%,
+            var(--uganda-yellow) 33.333%,
+            var(--uganda-red) 33.333%,
+            var(--uganda-red) 50%,
+            var(--uganda-black) 50%,
+            var(--uganda-black) 66.666%,
+            var(--uganda-yellow) 66.666%,
+            var(--uganda-yellow) 83.333%,
+            var(--uganda-red) 83.333%,
+            var(--uganda-red) 100%);
+}
+
+
+.work-gallery.masonry-span {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 10px;
+    /* fila base */
+    gap: 12px;
+    grid-auto-flow: dense;
+}
+
+/* El ITEM del grid es el wrapper */
+.work-gallery.masonry-span .grid-item {
+    grid-column: span var(--cspan, 4);
+    overflow: hidden;
+    /* opcional */
+    border-radius: 10px;
+    /* opcional */
+}
+
+/* La imagen manda la altura (sin recorte) */
+.work-gallery.masonry-span .grid-item>img.gallery-img {
+    width: 100%;
+    height: auto !important;
+    /* clave */
+    object-fit: initial !important;
+    /* por si tenías cover */
+    display: block;
+}
+
+/* spans por orientación */
+.work-gallery.masonry-span .grid-item.l {
+    --cspan: 4;
+}
+
+.work-gallery.masonry-span .grid-item.p {
+    --cspan: 3;
+}
+
+/* (opcional) destacar algunas */
+.work-gallery.masonry-span .grid-item.xl {
+    --cspan: 6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .work-gallery.masonry-span {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .work-gallery.masonry-span .grid-item.l {
+        --cspan: 4;
+    }
+
+    .work-gallery.masonry-span .grid-item.p {
+        --cspan: 4;
+    }
+}
+
+@media (max-width: 576px) {
+    .work-gallery.masonry-span {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .work-gallery.masonry-span .grid-item {
+        --cspan: 4;
+    }
+}
+
+.instagram-section {
+    padding: 100px 80px;
+    text-align: center;
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+}
+
+.section-label-center {
+    color: var(--primary-yellow);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.section-title-center {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 60px;
+}
+
+.insta-grid {
+    display: flex;
+    justify-content: center;
+    /* <-- centra el conjunto */
+    gap: 12px;
+    margin: 0 auto 50px auto;
+    /* <-- centra el bloque */
+    max-width: 1200px;
+    /* <-- evita que se “estire” infinito */
+    overflow-x: auto;
+    /* si no cabe, scroll horizontal */
+    overflow-y: hidden;
+    padding: 0 10px;
+
+}
+
+.insta-post {
+    flex: 1;
+    aspect-ratio: 1;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 32px;
+    transition: transform 0.3s ease;
+    overflow-y: hidden;
+}
+
+.insta-post:hover {
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 16px 32px;
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-dark);
+    color: white;
+}
+
+/* Help Section */
+.help-section {
+    padding: 120px 80px;
+    background: linear-gradient(135deg, #111 0%, #2E5A27 50%, #C49A00 100%);
+    color: white;
+    text-align: center;
+}
+
+.section-label-center-yellow {
+    color: var(--primary-yellow);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.section-title-large {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+.help-text {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    opacity: 0.9;
+}
+
+.help-tutorial {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    padding: 100px 80px;
+    background-color: white;
+}
+
+.contact-info {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.contact-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form-container {
+    flex: 1.5;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--text-dark);
+    background: transparent;
+    font-family: var(--font-main);
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.phone-input {
+    display: flex;
+}
+
+.phone-input select {
+    width: 120px;
+    border-right: none;
+}
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #1A1A1A;
+    color: #888;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon-yellow {
+    background-color: var(--primary-yellow);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #000;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.footer-desc {
+    font-size: 12px;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 12px;
+}
+
+.admin-login {
+    color: #888;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.footer-flag {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--uganda-yellow) 50%, var(--uganda-red) 50%);
+}
+
+.whatsapp-float {
+    position: fixed;
+    /* se queda visible al hacer scroll */
+    right: 18px;
+    bottom: 18px;
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    background: #e2e9e5;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+    z-index: 9999;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .28);
+}
+
+.whatsapp-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+/* En móvil, un pelín más grande */
+@media (max-width: 576px) {
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* Instagram actions (button + icon link) */
+
+.insta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.insta-icon-btn {
+    width: 104px;
+    height: 104px;
+    border: 1px solid var(--text-dark);
+    border-radius: 999px;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.insta-icon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+}
+
+.insta-icon {
+    width: 72%;
+    height: 72%;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 576px) {
+    .insta-icon-btn {
+        width: 92px;
+        height: 92px;
+    }
+}
+
+/* End Instagram Follow Actions */
+
+
+/* Tooltip only on hover (doesn't clutter) */
+
+/* Hover handle below the icon */
+.instagram-section .insta-icon-btn {
+    position: relative;
+}
+
+.instagram-section .insta-handle {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: #111;
+    background: rgba(255, 255, 255, .95);
+    border: 1px solid rgba(0, 0, 0, .15);
+    padding: 6px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s ease, transform .15s ease;
+}
+
+.instagram-section .insta-icon-btn:hover .insta-handle {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+.instagram-section .insta-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px;
+    width: 100%;
+}

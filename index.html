@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Hope Project</title>
+    <meta name="description" content="Solar light. Real hope. Bringing light to Uganda's most remote communities.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">☼</div>
+            <div class="logo-text">Empowering<br>Hope Project</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" data-i18n="nav_about">ABOUT US</a></li>
+            <li><a href="#work" data-i18n="nav_work">OUR WORK</a></li>
+            <li><a href="#instagram" data-i18n="nav_instagram">FOLLOW THE JOURNEY</a></li>
+            <li><a href="#help" data-i18n="nav_help">WANT TO HELP?</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">CONTACT</a></li>
+        </ul>
+        <div class="language-selector">
+            <button id="lang-btn">🇬🇧 EN</button>
+            <div class="lang-dropdown" id="lang-dropdown">
+                <a href="#" onclick="changeLanguage('en'); return false;"><img class="lang-flag" src="media/GB.png"
+                        alt="UK flag"> English</a>
+                <a href="#" onclick="changeLanguage('es'); return false;"><img class="lang-flag" src="media/ES.png"
+                        alt="Spain flag"> Español</a>
+                <a href="#" onclick="changeLanguage('de'); return false;"><img class="lang-flag" src="media/DE.png"
+                        alt="Germany flag"> Deutsch</a>
+                <a href="#" onclick="changeLanguage('fr'); return false;"><img class="lang-flag" src="media/FR.png"
+                        alt="France flag"> Français</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-top-border"></div>
+        <div class="hero-content">
+            <h2 class="hero-subtitle"><span class="logo-icon-small">☼</span> EMPOWERING HOPE PROJECT</h2>
+            <h1 class="hero-title" data-i18n="hero_title">Empowering Hope<br>Project</h1>
+            <div class="hero-buttons">
+                <a href="#help" class="btn btn-primary" data-i18n="hero_btn_help">WANT TO HELP US?</a>
+                <a href="#work" class="btn btn-link" data-i18n="hero_btn_work">DISCOVER OUR WORK ↓</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="about-image-container">
+            <img src="media/hillary_2.jpeg" alt="Hillary with camera" class="about-img">
+        </div>
+        <div class="about-content">
+            <h3 class="section-label" data-i18n="about_label">ABOUT US</h3>
+            <h2 class="section-title" data-i18n="about_title">Solar light. Real hope.</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h4 class="stat-value">100%</h4>
+                    <p class="stat-label" data-i18n="stat_solar">SOLAR</p>
+                </div>
+                <div class="stat-item">
+                    <h4 class="stat-value">0g</h4>
+                    <p class="stat-label">CO₂</p>
+                </div>
+                <div class="stat-item">
+                    <h4 class="stat-value">∞</h4>
+                    <p class="stat-label" data-i18n="stat_hope">HOPE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="founder-section">
+        <div class="founder-info">
+            <div class="founder-red-line"></div>
+            <div>
+                <h3 class="founder-name">Byamugish Hillary</h3>
+                <p class="founder-title" data-i18n="founder_title">Founder · Photographer from Kabale, Uganda</p>
+                <a class="founder-ig" href="https://www.instagram.com/hillary_shots/" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram @hillary_shots">
+                    <img class="founder-ig-icon" src="media/instagram_2.png" alt="" aria-hidden="true">
+                    <span class="founder-ig-handle">@hillary_shots</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <div class="work-header">
+            <div>
+                <h3 class="section-label" data-i18n="work_label">OUR WORK</h3>
+                <h2 class="section-title" data-i18n="work_title">Faces of the people we serve.</h2>
+                <div class="uganda-flag-bar" aria-hidden="true"></div>
+                <p class="work-subtitle" data-i18n="work_subtitle">Photographs from our journeys across remote Uganda.
+                </p>
+            </div>
+            <div class="uganda-flag-block"></div>
+        </div>
+        <div class="work-gallery masonry-span">
+            <div class="grid-item l"><img src="media/sobre_nosotros_1.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-1"></div>
+            <div class="grid-item p"><img src="media/sobre_nosotros_2.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-2"></div>
+            <div class="grid-item l"><img src="media/sobre_nosotros_3.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-3"></div>
+            <div class="grid-item p"><img src="media/sobre_nosotros_4.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-4"></div>
+            <div class="grid-item p"><img src="media/sobre_nosotros_5.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-5"></div>
+            <div class="grid-item l"><img src="media/sobre_nosotros_6.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-6"></div>
+            <div class="grid-item p"><img src="media/sobre_nosotros_7.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-7"></div>
+            <div class="grid-item l"><img src="media/sobre_nosotros_8.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-8"></div>
+            <div class="grid-item l"><img src="media/sobre_nosotros_9.jpeg" alt="Faces of Hope"
+                    class="gallery-img img-9"></div>
+        </div>
+    </section>
+
+    <section id="instagram" class="instagram-section">
+        <h3 class="section-label-center" data-i18n="insta_label">FOLLOW THE JOURNEY</h3>
+        <h2 class="section-title-center" data-i18n="insta_title">From the field, to your feed.</h2>
+        <div class="insta-grid">
+            <a href="https://www.instagram.com/p/DXen7RPl_5Z/?igsh=MWtjbXhpNHc3dTZzZA==" target="_blank"
+                rel="noopener noreferrer" class="insta-post"
+                style="background: linear-gradient(135deg, #FF6B6B, #C0392B);"><img src="media/sobre_nosotros_2.jpeg"
+                    alt="Instagram" class="insta-icon"></a>
+            <a href="https://www.instagram.com/p/DXgb83WDePx/?igsh=ZDl6amY2MzI0NDNm" target="_blank"
+                rel="noopener noreferrer" class="insta-post"
+                style="background: linear-gradient(135deg, #2ECC71, #27AE60);"><img src="media/sobre_nosotros_4.jpeg"
+                    alt="Instagram" class="insta-icon"></a>
+            <a href="https://www.instagram.com/p/DXrbw2Hl1k9/?igsh=MXBicHhvbjhoaDJvbQ==" target="_blank"
+                rel="noopener noreferrer" class="insta-post"
+                style="background: linear-gradient(135deg, #34495E, #2C3E50);"><img src="media/sobre_nosotros_8.jpeg"
+                    alt="Instagram" class="insta-icon"></a>
+            <!--<a href="https://www.instagram.com/empowering_hope_project/" target="_blank" rel="noopener noreferrer" class="insta-post" style="background: linear-gradient(135deg, #F1C40F, #F39C12);">📷</a>
+            <a href="https://www.instagram.com/empowering_hope_project/" target="_blank" rel="noopener noreferrer" class="insta-post" style="background: linear-gradient(135deg, #E74C3C, #8E44AD);">📷</a>
+            <a href="https://www.instagram.com/empowering_hope_project/" target="_blank" rel="noopener noreferrer" class="insta-post" style="background: linear-gradient(135deg, #A8E063, #56AB2F);">📷</a>-->
+        </div>
+
+        <div class="insta-actions">
+            <a href="https://www.instagram.com/empowering_hope_project/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline" data-i18n="insta_btn">◎ FOLLOW ON INSTAGRAM</a>
+            <a href="https://www.instagram.com/empowering_hope_project/" target="_blank" rel="noopener noreferrer"
+                class="insta-icon-btn" aria-label="Instagram @empowering_hope_project">
+                <img src="media/instagram.png" alt="Instagram" class="insta-icon">
+                <span class="insta-handle">@empowering_hope_project</span>
+            </a>
+        </div>
+
+    </section>
+
+    <section id="help" class="help-section">
+        <div class="help-content">
+            <h3 class="section-label-center-yellow" data-i18n="help_label">♡ WANT TO HELP US?</h3>
+            <h2 class="section-title-large" data-i18n="help_title">Your support powers a village.</h2>
+            <p class="help-text" data-i18n="help_text">Every contribution installs another solar panel — another evening
+                of homework, another safe night, another future lit up.</p>
+            <a href="https://www.xoom.com" target="_blank" class="btn btn-primary" data-i18n="help_btn">DONATE VIA XOOM
+                →</a>
+            <p class="help-tutorial" data-i18n="help_tutorial">Don't know how to donate with XOOM? Follow these
+                instructions</p>
+            <a id="help-instructions-btn" href="media/Instructions_EN.pdf" target="_blank" class="btn btn-primary"
+                data-i18n="help_instructions">INSTRUCTIONS ↓</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-info">
+            <h2 class="section-title" data-i18n="contact_title">CONTACT</h2>
+            <p class="contact-subtitle" data-i18n="contact_subtitle">We'd love to hear from you.</p>
+            <div class="contact-details">
+                <p><strong>Empowering Hope Project</strong></p>
+                <p>Kabale, Uganda</p>
+                <p>Email: hillary@hillaryugandatrips.com</p>
+                <p class="contact_phone" data-i18n="contact_phone">Phone: +256 704 189 185</p>
+            </div>
+        </div>
+        <div class="contact-form-container">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-i18n="form_name">NAME *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <!--<div class="form-group">
+                        <label for="phone" data-i18n="form_phone">PHONE NUMBER</label>
+                        <div class="phone-input">
+                            <select id="country-code" name="countryCode">
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+34">🇪🇸 +34</option>
+                                <option value="+49">🇩🇪 +49</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+256">🇺🇬 +256</option>
+                            </select>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>-->
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="form_email">EMAIL ADDRESS *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject" data-i18n="form_subject">SUBJECT *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="description" data-i18n="form_desc">DESCRIPTION *</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">
+                    <span data-i18n="form_send">SEND</span> ⩥
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="logo-icon-yellow">☼</div>
+            <div class="footer-brand">
+                <span class="footer-title">Empowering Hope</span>
+                <span class="footer-desc" data-i18n="footer_desc">Bringing light to Uganda's most remote
+                    communities.</span>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>© 2026 Empowering Hope Project</p>
+            <p>All rights reserved.</p>
+            <!--<a href="#" class="admin-login">Admin login</a>-->
+        </div>
+        <div class="footer-flag"></div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a id="whatsapp-float" class="whatsapp-float"
+        href="https://wa.me/256704189185?text=Hi!%20😊%20I%20would%20like%20more%20information%20about%20your%20amazing%20project."
+        target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+        <img class="whatsapp-icon" src="media/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
