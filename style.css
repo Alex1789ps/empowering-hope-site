@@ -994,59 +994,20 @@ textarea {
 }
 
 
-/* ===== ABOUT US: reordenar en móvil ===== */
+/* ===== Mobile fix: Hillary info just under About image ===== */
 @media (max-width: 768px) {
-
-  .about-section {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Orden visual */
-  .about-image-container {
-    order: 1;
-  }
-
   .founder-section {
-    order: 2;
-    padding: 32px 24px;
+    margin-top: -32px;
+    padding-top: 24px;
     background-color: var(--bg-light);
   }
-
-  .about-content {
-    order: 3;
-    padding-top: 32px;
-  }
-
-  /* Ajustes estéticos para móvil */
-  .founder-info {
-    align-items: flex-start;
-  }
-
-  .founder-name {
-    font-size: 18px;
-  }
-
-  .founder-title,
-  .founder-ig {
-    font-size: 14px;
-  }
 }
 
-/* ===== Instagram carousel fix (mobile) ===== */
+
+/* ===== Mobile fix: Instagram first card fully visible ===== */
 @media (max-width: 768px) {
-
   .insta-grid {
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-left: 16px;   /* espacio visible inicial */
-    padding-right: 16px;
-    scroll-padding-left: 16px;
-  }
-
-  .insta-post {
-    min-width: 70%;
-    flex: 0 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
-
