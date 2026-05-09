@@ -13,6 +13,21 @@
     --lang-flag-w: 30px;
     --lang-flag-h: 20px;
     --lang-gap: 8px;
+    --uganda-stripes: linear-gradient(to right,
+        var(--uganda-black) 0%,
+        var(--uganda-black) 16.666%,
+        var(--uganda-yellow) 16.666%,
+        var(--uganda-yellow) 33.333%,
+        var(--uganda-red) 33.333%,
+        var(--uganda-red) 50%,
+        var(--uganda-black) 50%,
+        var(--uganda-black) 66.666%,
+        var(--uganda-yellow) 66.666%,
+        var(--uganda-yellow) 83.333%,
+        var(--uganda-red) 83.333%,
+        var(--uganda-red) 100%
+    );
+
 
 }
 
@@ -187,21 +202,7 @@ body {
     left: 0;
     right: 0;
     height: 12px;
-    background: linear-gradient(to right,
-            var(--uganda-black) 0%,
-            var(--uganda-black) 16.666%,
-            var(--uganda-yellow) 16.666%,
-            var(--uganda-yellow) 33.333%,
-            var(--uganda-red) 33.333%,
-            var(--uganda-red) 50%,
-            var(--uganda-black) 50%,
-            var(--uganda-black) 66.666%,
-            var(--uganda-yellow) 66.666%,
-            var(--uganda-yellow) 83.333%,
-            var(--uganda-red) 83.333%,
-            var(--uganda-red) 100%);
-
-
+    background: var(--uganda-stripes);
     z-index: 2;
 }
 
@@ -766,10 +767,12 @@ textarea {
 .footer-flag {
     position: absolute;
     bottom: 0;
-    left: 80px;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(to right, var(--uganda-yellow) 50%, var(--uganda-red) 50%);
+    left: 0px;
+    width: 100%;
+    height: 12px;
+    margin-top: 40px;
+    background: var(--uganda-stripes);
+
 }
 
 .whatsapp-float {
