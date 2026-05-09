@@ -994,20 +994,14 @@ textarea {
 }
 
 
-/* ===== Mobile fix: Hillary info just under About image ===== */
-@media (max-width: 768px) {
-  .founder-section {
-    margin-top: -32px;
-    padding-top: 24px;
-    background-color: var(--bg-light);
-  }
+/* === ABOUT: Hillary under image on mobile === */
+.mobile-founder{display:none;}
+@media (max-width:768px){
+  .mobile-founder{display:block; margin:24px 0;}
+  .founder-section:not(.mobile-founder){display:none;}
 }
 
-
-/* ===== Mobile fix: Instagram first card fully visible ===== */
-@media (max-width: 768px) {
-  .insta-grid {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
+/* === Instagram carousel: show first card fully on mobile === */
+@media (max-width:768px){
+  .insta-grid{justify-content:flex-start;}
 }
