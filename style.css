@@ -300,6 +300,13 @@ body {
     margin-bottom: 20px;
 }
 
+.section-description {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    margin-bottom: 60px;
+}
+
 .section-title {
     font-size: 56px;
     font-weight: 900;
